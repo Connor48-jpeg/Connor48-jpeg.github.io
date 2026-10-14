@@ -40,7 +40,7 @@ drawCircle();
 
 
         // TODO 7 : Use a loop to create multiple circles
-     for(var i = 0; i < 500; i++)
+     for(var i = 0; i < 1000; i++)
         drawCircle();
      
 
