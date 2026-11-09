@@ -343,21 +343,20 @@ function getRandomAvailablePosition() {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * ROWS);
     spaceIsAvailable = true;
-for (var i = 0; i < snake.length; i++) {
-      if (snake[i].column === randomPosition.column && snake[i].row === randomPosition.row) {
-        spaceIsAvailable = false;
-        break;
-      
-    
+
     /*
       TODO 14: After generating the random position determine if that position is
       not occupied by a snakeSquare in the snake's body. If it is then set 
       spaceIsAvailable to false so that a new position is generated.
     */
-
-
-
+ for (var i = 0; i <snake.length; i++){
+  if (snake[i].column === randomPosition.column && snake[i].row === randomPosition.row){
+    spaceIsAvailable = false;
+    break;
+      }
+    }
   }
+  
 
   return randomPosition;
 }
@@ -373,6 +372,4 @@ function calculateHighScore() {
   }
 
   return highScore;
-}
-  }
 }
