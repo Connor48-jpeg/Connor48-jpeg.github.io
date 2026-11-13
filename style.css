@@ -3,7 +3,8 @@ body {background: rgb(190, 0, 0); color: rgb(255, 255, 255); padding: 10px; font
 #all-contents {max-width: 800px; margin: auto;}
 
 /* navigation menu */
-nav {background: rgb(0, 0, 0); margin: 0 auto; display: flex; padding: 10px; margin-bottom: 20px;}
+nav {background: rgb(0, 0, 0); margin: 0 auto; display: flex; padding: 10px; margin-bottom: 20px;
+border-radius: 12px;}
 
 h1 {display: flex; align-items: center; color: rgb(255, 255, 255); flex: 1; margin: 0;}
 
@@ -18,7 +19,24 @@ main {background: rgb(0, 0, 0); display: flex; margin-top: 20px;}
 
 .sidebar {margin-right: 40px; padding: 10px;}
 
-.sidebar-img {width: 200px;}
+.sidebar-img {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.sidebar-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
 
 .content {flex: 1; padding: 15px; color: rgb(255, 255, 255);}
 
@@ -77,4 +95,65 @@ h2, h3 {margin: 0px;}
 
 #portfolio a:hover::after {
   opacity: 1;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  padding: 16px 24px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000;
+}
+
+#nav-ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.nav-li a:hover {
+  background: #000;
+  color: #fff;
+}
+nav {
+  background: #1a1a2e;
+  border-color: #1a1a2e;
+}
+
+nav h1 {
+  color: #e94560;
+}
+
+.nav-li a {
+  color: #a8b2d8;
+}
+
+.nav-li a:hover {
+  background: #e94560;
+  color: #fff;
 }
